@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Global Commitment Index - Political Accountability Worldwide</title>
+  <meta name="description" content="Track government pledge fulfillment across major democracies. Data-driven political accountability.">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌍</text></svg>">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/style.css" />
+</head>
+<body>
+  <div class="bg-animation"></div>
+  <div class="glow-effect"></div>
+
+  <header>
+    <div class="container header-content">
+      <div>
+        <div class="logo">🌍 Global Commitment Index</div>
+        <div class="tagline">Tracking Political Accountability Worldwide</div>
+      </div>
+      <div class="header-search">
+        <input type="text" id="searchInput" placeholder="🔍 Search countries, leaders, parties..." class="search-input">
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero-global">
+      <div class="container">
+        <div class="hero-label">POLITICAL ACCOUNTABILITY TRACKER</div>
+        <h1 class="hero-title">How Well Do World Leaders<br>Keep Their Promises?</h1>
+        <p class="hero-description">
+          Track government pledge fulfillment across major democracies with transparent, 
+          data-driven accountability metrics. Every promise. Every government. Verified.
+        </p>
+        
+        <div class="global-stats">
+          <div class="stat-box">
+            <div class="stat-number" id="totalCountries">15</div>
+            <div class="stat-label">Countries Tracked</div>
+          </div>
+          <div class="stat-box">
+            <div class="stat-number" id="avgWCDI">--</div>
+            <div class="stat-label">Global Avg WCDI</div>
+          </div>
+          <div class="stat-box">
+            <div class="stat-number" id="totalPledges">500+</div>
+            <div class="stat-label">Pledges Monitored</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="country-list-section">
+      <div class="container">
+        <div class="section-controls">
+          <div>
+            <h2>World Governments</h2>
+            <p class="section-subtitle">Click any country to explore their complete accountability record</p>
+          </div>
+          <div class="filter-sort-controls">
+            <select id="sortSelect" class="sort-select">
+              <option value="wcdi-desc">🏆 WCDI: High to Low</option>
+              <option value="wcdi-asc">📉 WCDI: Low to High</option>
+              <option value="name-asc">🔤 Name: A-Z</option>
+              <option value="approval-desc">👥 Approval: High to Low</option>
+            </select>
+          </div>
+        </div>
+
+        <div id="countryList" class="country-list"></div>
+      </div>
+    </section>
+
+    <section id="about" class="about-section">
+      <div class="container">
+        <h2>What is the WCDI?</h2>
+        <p class="about-intro">The Weighted Commitment Delivery Index is the world's first comprehensive metric for political accountability</p>
+        <div class="about-grid">
+          <div class="about-card">
+            <div class="about-icon">📊</div>
+            <h3>Weighted Scoring</h3>
+            <p>Every government pledge is scored from 0-100% based on delivery. Scores are weighted by voter importance: Economy & Health (3×), Education & Crime (2×), Environment (1×).</p>
+          </div>
+          <div class="about-card">
+            <div class="about-icon">🔍</div>
+            <h3>Transparent Data</h3>
+            <p>All data sourced from independent fact-checkers, government records, and academic research. Every claim is verifiable and documented with sources.</p>
+          </div>
+          <div class="about-card">
+            <div class="about-icon">🌍</div>
+            <h3>Global Coverage</h3>
+            <p>Tracking current governments and historical data across major democracies to show long-term trends in political accountability and promise-keeping.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-col">
+          <h4>About</h4>
+          <p>Data-driven political accountability tracking</p>
+        </div>
+        <div class="footer-col">
+          <h4>Sources</h4>
+          <p>PolitiFact • Full Fact • IFG • FactCheck.org</p>
+        </div>
+        <div class="footer-col">
+          <h4>Updated</h4>
+          <p>October 2025</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>Built with transparency & accountability • Open data for democracy</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets//data/data-global.js"></script>
+  <script src="assets/script-global.js"></script>
+</body>
+</html>

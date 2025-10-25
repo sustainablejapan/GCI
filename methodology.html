@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GCI Methodology - WCDI v2.0</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>WCDI v2.0 Methodology</h1>
+            <p class="tagline">The formula for fair political accountability.</p>
+        </div>
+    </header>
+
+    <main class="container content-page">
+        <p><a href="index.html" class="button">← Back to Index</a></p>
+
+        <section>
+            <h2>The Weighted Commitment Delivery Index (WCDI)</h2>
+            <p>The **WCDI** is designed to provide a statistically rigorous and democratically representative measure of governmental accountability regarding electoral promises. It addresses the core flaw in traditional promise tracking: treating all pledges equally, regardless of their perceived importance.</p>
+
+            <h3>The Formula</h3>
+            <div class="formula-box">
+                <div style="font-family:serif; font-size: 2em; text-align: center;">
+                    WCDI = 
+                    <span style="font-size: 1.5em; vertical-align: middle;">&sum; (Sj &times; Wi)</span>
+                    <hr style="border-top: 2px solid #333; width: 150px; margin: 5px auto;">
+                    <span style="font-size: 1.5em; vertical-align: middle;">&sum; Wi</span>
+                    &times; 100
+                </div>
+                <p>Where **Sj** is the Status Score (0.00 to 1.00) and **Wi** is the Importance Weight (0.5 to 3.0).</p>
+            </div>
+        </section>
+        
+        <hr>
+
+        <section>
+            <h2>Pledge Status Scoring (Sj)</h2>
+            <p>Scores are assigned based on objective outcomes verified by non-partisan fact-checking and legislative data.</p>
+            <table id="status-score-table">
+                <thead>
+                    <tr><th>Status Category</th><th>Score (Sj)</th><th>Rationale</th></tr>
+                </thead>
+                <tbody>
+                    <tr><td>Kept / Achieved</td><td>1.00</td><td>The promise has been fully delivered as stated.</td></tr>
+                    <tr><td>Strong Compromise / On Track</td><td>0.75</td><td>Largely delivered, or on a clear, irreversible path to full completion.</td></tr>
+                    <tr><td>Weak Compromise / In Progress</td><td>0.50</td><td>Partial fulfillment achieved; significant progress made, but ultimate success is uncertain.</td></tr>
+                    <tr><td>Stalled / Wait & See / Unclear</td><td>0.25</td><td>No substantive action taken; progress is halted or status is unclear.</td></tr>
+                    <tr><td>Broken / Not Kept / Abandoned</td><td>0.00</td><td>Explicit failure, reversal of policy, or complete lack of action.</td></tr>
+                </tbody>
+            </table>
+        </section>
+        
+        <hr>
+
+        <section>
+            <h2>Voter Importance Weighting (Wi)</h2>
+            <p>Weights are derived from normalized, aggregated national polling data regarding the **most important issues** cited by the public during the relevant election cycle. This ensures the index prioritizes the areas the voters mandated.</p>
+            <table id="weight-score-table">
+                <thead>
+                    <tr><th>Policy Area</th><th>Weight (Wi)</th><th>Example Global Pledges</th></tr>
+                </thead>
+                <tbody>
+                    <tr><td>Economy / Health / Immigration</td><td>3.0</td><td>Major tax changes, **reducing public healthcare waiting times**, border wall construction or control targets.</td></tr>
+                    <tr><td>Crime / Education / Justice</td><td>2.0</td><td>Police recruitment targets, **increasing school funding per student**, sentencing reform.</td></tr>
+                    <tr><td>Environment / Housing / Defence</td><td>1.0</td><td>Net-zero targets, **affordable housing construction rates**, defense spending goals.</td></tr>
+                    <tr><td>Minor / Governance / Technical</td><td>0.5</td><td>Specific cultural grants, bureaucratic changes, legislative housekeeping.</td></tr>
+                </tbody>
+            </table>
+        </section>
+        
+        <hr>
+
+        <section>
+            <h2>Crisis Adjustment Factor</h2>
+            <p>The **WCDI-Crisis-Adjusted** score is calculated by excluding pledges whose fulfillment status was demonstrably and severely impacted by major exogenous shocks (e.g., global pandemics, major economic collapses, or wars). These pledges are flagged with a **(C)**.</p>
+            <p>This provides a cleaner measure of a government’s performance on its core, domestic, and non-crisis-related electoral mandate.</p>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Global Commitment Index. All rights reserved. <a href="METHODOLOGY.md">Raw Methodology File</a></p>
+        </div>
+    </footer>
+</body>
+</html>

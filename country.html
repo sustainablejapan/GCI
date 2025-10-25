@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Country Government Commitment Tracker</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;900&display=swap" rel="stylesheet" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  
+  <!-- Country-specific CSS -->
+  <link rel="stylesheet" href="assets/style-country.css" />
+</head>
+<body>
+  <div class="bg-animation"></div>
+
+  <header>
+    <div class="container header-content">
+      <div>
+        <a href="index.html" class="back-link">← Back to Global Overview</a>
+        <div class="logo" id="countryName">Loading...</div>
+      </div>
+      <nav class="header-nav">
+        <a href="#overview" class="nav-link active">Overview</a>
+        <a href="#pledges" class="nav-link">Pledges</a>
+        <a href="#history" class="nav-link">History</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- Current Government Hero -->
+    <section class="country-hero" id="overview">
+      <div class="container">
+        <div class="hero-grid">
+          <div class="hero-info">
+            <div class="country-badge">CURRENT GOVERNMENT</div>
+            <h1 class="leader-title" id="leaderName">Loading...</h1>
+            <div class="leader-meta">
+              <span id="partyName">...</span> • <span id="leaderTitle">...</span>
+            </div>
+            <div class="term-info">
+              <span>In Power: <strong id="inPower">...</strong></span>
+              <span>Next Election: <strong id="nextElection">...</strong></span>
+            </div>
+          </div>
+          
+          <div class="hero-wcdi">
+            <div class="wcdi-display-large">
+              <div class="wcdi-label">Current WCDI Score</div>
+              <div class="wcdi-value-large moderate" id="wcdiHero">--</div>
+              <button class="info-btn" id="wcdiInfoBtn">ⓘ How is this calculated?</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Key Metrics -->
+    <section class="metrics-section">
+      <div class="container">
+        <div class="metrics-grid">
+          <div class="metric-card">
+            <div class="metric-icon">📊</div>
+            <div class="metric-label">Pledge Fulfillment</div>
+            <div class="metric-value" id="fulfillmentRate">--</div>
+            <div class="metric-sub">Overall completion rate</div>
+          </div>
+          
+          <div class="metric-card">
+            <div class="metric-icon">👥</div>
+            <div class="metric-label">Public Approval</div>
+            <div class="metric-value" id="approvalRate">--</div>
+            <div class="metric-sub">Latest polling average</div>
+          </div>
+          
+          <div class="metric-card">
+            <div class="metric-icon">📈</div>
+            <div class="metric-label">Historical Rank</div>
+            <div class="metric-value" id="historicalRank">--</div>
+            <div class="metric-sub">vs previous governments</div>
+          </div>
+          
+          <div class="metric-card">
+            <div class="metric-icon">⚠️</div>
+            <div class="metric-label">Key Challenge</div>
+            <div class="metric-value challenge-text" id="keyChallenge">--</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Government Selector -->
+    <section class="government-selector">
+      <div class="container">
+        <h2>Compare Governments</h2>
+        <div class="selector-wrapper">
+          <select id="governmentSelect" class="gov-select">
+            <option value="">Select a government to compare</option>
+          </select>
+        </div>
+      </div>
+    </section>
+
+    <!-- Pledge Tracker -->
+    <section class="pledges-section" id="pledges">
+      <div class="container">
+        <div class="section-header">
+          <div>
+            <h2>Pledge Tracker</h2>
+            <p class="section-subtitle">Detailed breakdown of all election promises</p>
+          </div>
+          <div class="filter-tabs">
+            <button class="filter-tab active" data-filter="all">All</button>
+            <button class="filter-tab" data-filter="kept">Kept</button>
+            <button class="filter-tab" data-filter="progress">In Progress</button>
+            <button class="filter-tab" data-filter="broken">Broken</button>
+          </div>
+        </div>
+        
+        <div id="pledgeList" class="pledge-list"></div>
+      </div>
+    </section>
+
+    <!-- Historical Chart -->
+    <section class="history-section" id="history">
+      <div class="container">
+        <h2>Historical WCDI Trends</h2>
+        <p class="section-subtitle">Track commitment delivery across different governments</p>
+        <div class="chart-container">
+          <canvas id="historyChart"></canvas>
+        </div>
+      </div>
+    </section>
+
+    <!-- All Governments Timeline -->
+    <section class="timeline-section">
+      <div class="container">
+        <h2>Government History</h2>
+        <div id="governmentTimeline" class="timeline"></div>
+      </div>
+    </section>
+  </main>
+
+  <!-- WCDI Modal -->
+  <div class="modal" id="wcdiModal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2>WCDI Calculation Breakdown</h2>
+        <button class="close-btn">&times;</button>
+      </div>
+      <div id="modalBody"></div>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <div class="container">
+      <p>Data sources: PolitiFact, Institute for Government, Full Fact, FactCheck.org, Academic Research</p>
+      <p>Last updated: October 2025</p>
+    </div>
+  </footer>
+
+  <!-- Load all necessary data files -->
+  <script src="assets/data-global.js"></script>
+  <script src="assets/data/data-uk.js"></script>
+  <script src="assets/data/data-usa.js"></script>
+  <script src="assets/script-country.js"></script>
+</body>
+</html>
